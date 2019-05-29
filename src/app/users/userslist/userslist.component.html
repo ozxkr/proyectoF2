@@ -1,0 +1,27 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>Lista de usuarios</mat-card-title>
+	</mat-card-header>
+
+	<mat-card-content>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Avatar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor='let user of users'>
+					<td>{{ user.id }}</td>
+					<td>{{ user.nombre }}</td>
+					<td>{{ user.apellido }}</td>
+					<td><img src="{{user.avatar}}"></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</mat-card-content>
+</mat-card>
